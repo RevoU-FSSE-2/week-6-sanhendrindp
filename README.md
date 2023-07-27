@@ -13,7 +13,7 @@ The problem using VM is the slow process of creating the VM itself, it also take
 Different when using VM, containers use the host operating system itself (no need to install another OS like using VM). So, containers will be more resource efficient and run faster than using a VM.
 
 <p align="center">
-    <img src="images/docker container diagram.png" width="400">
+    <img src="images/installing/docker container diagram.png" width="400">
     <br>
     <em>Diagram of Docker Container</em>
 </p>
@@ -27,5 +27,5 @@ Docker runs natively on Linux operating system. So, for Windows or Mac users, we
 2. Click Download Docker Desktop (it depend on what OS you used, in this case, i used Windows).
 
 <p align="center">
-    <img src="images/1.PNG" width="450">
+    <img src="images/installing/1.PNG" width="450">
 </p>
