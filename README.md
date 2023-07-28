@@ -4,6 +4,12 @@
 
 Docker is a software platform that allows you to build, test, and deploy applications in a **containers** to run on the host operating system.
 
+<p align="center">
+    <img src="images/installing/docker architecture.png" width="450">
+    <br>
+    <em>Docker Architecture</em>
+</p>
+
 # What are Containers?
 
 A long time ago before there was Docker, we know about Virtual Machines (like VMware for example) to run software applications, where VM run applications inside a guest Operating System, which runs on virtual hardware powered by the server's host OS.
@@ -79,3 +85,54 @@ Before we build our Dockerfile, the first thing we need to do is to create packa
 </p>
 
 ### Create a Dockerfile
+
+Now we create our Dockerfile which will assemble an Node.js image. Here is the format of the Dockerfile:
+
+```Dockerfile
+# Comment
+INSTRUCTION arguments
+```
+
+Step to create Dockerfile:
+
+1. First, we need to define what image we want to build from (in this case Node.js). I used slim version of node that available from the <a href="https://hub.docker.com/">Docker Hub</a>.
+
+<p align="center">
+    <img src="images/build/8.PNG" width="500">
+</p>
+
+2. **This is optional**, i use LABEL to provide additional information on the image we created. This LABEL information will be visible later when using the inspect command.
+
+<p align="center">
+    <img src="images/build/9.PNG" width="500">
+</p>
+
+3. Next, create a directory to hold the application code inside the image. For example, i created app as my working directory like the code below.
+
+<p align="center">
+    <img src="images/build/10.PNG" width="500">
+</p>
+
+4. Used COPY to copying all .json file. The image will comes with Node.js and NPM already installed, so we will use RUN npm install.
+
+<p align="center">
+    <img src="images/build/11.PNG" width="500">
+</p>
+
+5. Again with COPY instruction, now we bundle the app source code inside the docker image.
+
+<p align="center">
+    <img src="images/build/12.PNG" width="500">
+</p>
+
+6. The app will be bound to port 3001, so use EXPOSE instruction.
+
+<p align="center">
+    <img src="images/build/13.PNG" width="500">
+</p>
+
+7. Lastly, with CMD, define the command to run the app during the docker container process later.
+
+<p align="center">
+    <img src="images/build/14.PNG" width="500">
+</p>

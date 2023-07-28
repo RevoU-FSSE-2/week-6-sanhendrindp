@@ -1,26 +1,27 @@
-# Dockerfile format : INSTRUCTION + arguments
-# INSTRUCTION : perintah yg digunakan oleh Dockerfile
-# arguments : data argument untuk INSTRUCTION yg diberikan
-
-# FROM digunakan untuk membuat build stage awal dari image yg kita tentukan
+# FROM is used to create the initial build stage of the image we specify
 # FROM imageName:version
 FROM node:slim
 
-# LABEL, instruksi untuk menambahkan detail informasi tambahan pada image
+# LABEL is to provide additional information on the image
 # LABEL <key>=<value>
 LABEL author="Sanhendrin Dwi Prasetya"
 LABEL website="https://sanhendrindp.site/"
 
+# Create app directory
 WORKDIR /app
 
+# Copying package.json to working directory
 COPY package*.json ./
 
+# Install app dependencies, this image will comes with Node.js and NPM already installed
+# RUN is use to execute commands during the docker build process
 RUN npm install
 
+# Bundle the app source code
 COPY . .
 
+# Binds the app to port 3001
 EXPOSE 3001
 
-# CMD / Command, intruksi yg digunakan ketika menjalankan docker container
-# CMD / Command, tdk akan dijalankan ketika proses build, melainkan dijalankan ketika docker container berjalan
+# CMD is use to run the app during the docker container process
 CMD ["node", "app.js"]
