@@ -29,3 +29,31 @@ Docker runs natively on Linux operating system. So, for Windows or Mac users, we
 <p align="center">
     <img src="images/installing/1.PNG" width="450">
 </p>
+
+3. After download finished, install Docker Desktop, restart your PC, then run the app.
+
+<p align="center">
+    <img src="images/installing/2.PNG" width="700">
+</p>
+
+4. If you encounter something like the image show below, it means Docker Desktop requires a newer WSL kernel version install to your PC.
+
+<p align="center">
+    <img src="images/installing/4.PNG" width="450">
+</p>
+
+5. To install newer WSL kernel version to your PC, open your powershell, then type the command **wsl.exe --install** or **wsl.exe --update**.
+
+6. After that, set WSL 2 as your default version. Type the command **wsl --set-default-version 2**.
+
+7. Docker Desktop is ready to use.
+
+<p align="center">
+    <img src="images/installing/9.PNG" width="450">
+</p>
+
+8. You can also verify your Docker Desktop installation using command **wsl --set-default-version 2**.
+
+<p align="center">
+    <img src="images/installing/10.PNG" width="500">
+</p>
