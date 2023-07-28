@@ -1,4 +1,14 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/nj7iw4Wb)
+![Banner](images/docker.png)
+
+# List of Contents
+
+- [What is Docker?](#what-is-docker)
+- [What are Containers?](#what-are-containers)
+- [Installing Docker](#installing-docker)
+- [Dockerize Node.js Project](#dockerize-nodejs-project)
+  - [Create package.json](#create-packagejson)
+  - [Create a Dockerfile](#create-a-dockerfile)
+  - [Docker Build](#docker-build)
 
 # What is Docker?
 
@@ -136,3 +146,61 @@ Step to create Dockerfile:
 <p align="center">
     <img src="images/build/14.PNG" width="500">
 </p>
+
+8. Dockerfile should now look like this:
+
+<p align="center">
+    <img src="images/build/15.PNG" width="500">
+</p>
+
+### Docker Build
+
+Now after dockerfile already created, its time to build the image using docker command in terminal (i used GIT bash to run the command).
+
+1. Build the image. Here i named the image with node-app.js:1.0.0. Which means my image version is 1.0.0, if you don't use this, your image version will be latest.
+
+<p align="center">
+    <img src="images/build/1.PNG" width="700">
+</p>
+
+2. After that, we can see our image that we created before.
+
+<p align="center">
+    <img src="images/build/2.PNG" width="700">
+</p>
+
+3. To view the information created with the previous LABEL instruction, we can use command: **docker image inspect node-app.js:1.0.0**
+
+<p align="center">
+    <img src="images/build/3.PNG" width="500">
+</p>
+
+4. Then, we can run the docker container based on image that we created.
+
+<p align="center">
+    <img src="images/build/4.PNG" width="700">
+</p>
+
+<p align="center">
+    <img src="images/build/6.PNG" width="800">
+</p>
+
+<p align="center">
+    <img src="images/build/5.PNG" width="800">
+</p>
+
+---
+
+<p align="center">Thanks! 🙏</p>
+
+<p align="center">
+  <a href="https://github.com/EddieHubCommunity" target="_blank" rel="noopener noreferrer">
+    <img src="https://forthebadge.com/images/badges/built-with-love.svg" alt="built with love badge" />
+ </a>
+  <a href="https://github.com/EddieHubCommunity" target="_blank" rel="noopener noreferrer">
+    <img src="https://forthebadge.com/images/badges/made-with-markdown.svg" alt="made with markdown badge" />
+ </a>
+  <a href="https://github.com/EddieHubCommunity" target="_blank" rel="noopener noreferrer">
+    <img src="https://forthebadge.com/images/badges/open-source.svg" alt="open source badge" />
+ </a>
+ </p>
