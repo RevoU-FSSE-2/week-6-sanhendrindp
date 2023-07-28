@@ -8,6 +8,12 @@ Docker is a software platform that allows you to build, test, and deploy applica
 
 A long time ago before there was Docker, we know about Virtual Machines (like VMware for example) to run software applications, where VM run applications inside a guest Operating System, which runs on virtual hardware powered by the server's host OS.
 
+<p align="center">
+    <img src="images/installing/virtual machines diagram.png" width="450">
+    <br>
+    <em>Diagram of Virtual Machines</em>
+</p>
+
 The problem using VM is the slow process of creating the VM itself, it also takes time to boot into the operating system in the VM.
 
 Different when using VM, containers use the host operating system itself (no need to install another OS like using VM). So, containers will be more resource efficient and run faster than using a VM.
@@ -62,4 +68,14 @@ Docker runs natively on Linux operating system. So, for Windows or Mac users, we
 
 To dockerize project, we need to build docker image. Docker image is a file used to execute code in a docker container, which is in this case, we need Node.js image.
 
-To build docker image, we need to create Dockerfile inside our code.
+To build docker image, we need to create **Dockerfile** inside our code. Dockerfile is a text file that contains commands to create a docker image.
+
+### Create package.json
+
+Before we build our Dockerfile, the first thing we need to do is to create package.json file that decribes the app and its dependencies.
+
+<p align="center">
+    <img src="images/build/7.PNG" width="400">
+</p>
+
+### Create a Dockerfile
