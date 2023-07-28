@@ -52,8 +52,14 @@ Docker runs natively on Linux operating system. So, for Windows or Mac users, we
     <img src="images/installing/9.PNG" width="450">
 </p>
 
-8. You can also verify your Docker Desktop installation using command **wsl --set-default-version 2**.
+8. You can also verify your Docker Desktop installation using command **docker --version**.
 
 <p align="center">
     <img src="images/installing/10.PNG" width="500">
 </p>
+
+# Dockerize Node.js Project
+
+To dockerize project, we need to build docker image. Docker image is a file used to execute code in a docker container, which is in this case, we need Node.js image.
+
+To build docker image, we need to create Dockerfile inside our code.
